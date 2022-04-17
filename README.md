@@ -2,7 +2,7 @@
 Aprender a usar el Matcher de Spacy. Para eso, se proveen tests de unidad que deben pasar exitosamente. La tarea es implementar el matcher que haga que los tests pasen.
 ## Pasos
 - Abrir la terminal en la carpeta donde se trabajará (cmd)
-- Clonarse este repo (```git clone ... && cd AprenderMatcher```)
+- Clonarse este repo (```git clone git@github.com:tanevitch/AprendiendoMatcher.git && cd AprenderMatcher```)
 - Crear el ambiente virtual (```python -m venv .env```)
 - Activar el ambiente virtual (```.env\Scripts\activate```)
 - Instalar las dependencias:
