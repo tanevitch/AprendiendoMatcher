@@ -17,3 +17,7 @@ Aprender a usar el Matcher de Spacy. Para eso, se proveen tests de unidad que de
 ✨ https://spacy.io/usage/rule-based-matching
 
 ✨ https://explosion.ai/demos/matcher 
+
+✨ https://universaldependencies.org/docs/en/pos/
+
+✨ https://universaldependencies.org/docs/en/dep/
