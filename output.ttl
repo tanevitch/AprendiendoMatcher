@@ -1,0 +1,63 @@
+@prefix : <http://www.semanticweb.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.semanticweb.org> a owl:Ontology .
+
+:assignedTo a owl:ObjectProperty ;
+    rdfs:domain :Person ;
+    rdfs:range :Requirement ;
+    owl:inverseOf :hasAssigned .
+
+:dependsOn a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain :Requirement ;
+    rdfs:range :Requirement .
+
+:hasGoal a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain :Requirement ;
+    rdfs:range :Requirement .
+
+:hasResource a owl:ObjectProperty ;
+    rdfs:domain :Requirement ;
+    rdfs:range :Resource .
+
+:requirement2 a :Requirement ;
+    rdfs:label "clone project"@es ;
+    :dependsOn :requirement1 ;
+    :hasAssigned :person0 .
+
+:requirement3 a :Requirement ;
+    rdfs:label "executes main file"@es ;
+    :dependsOn :requirement1 ;
+    :hasAssigned :person2 .
+
+:Resource a owl:Class .
+
+:hasAssigned a owl:ObjectProperty ;
+    rdfs:domain :Requirement ;
+    rdfs:range :Person .
+
+:person1 a :Person ;
+    rdfs:label "juan"@es .
+
+:person2 a :Person ;
+    rdfs:label "Maria"@es .
+
+:requirement0 a :Requirement ;
+    rdfs:label "install git"@es ;
+    :hasAssigned :person1 .
+
+:person0 a :Person ;
+    rdfs:label "luciana"@es .
+
+:requirement1 a :Requirement ;
+    rdfs:label "install virtualenv"@es ;
+    :dependsOn :requirement0 ;
+    :hasAssigned :person0 .
+
+:Person a owl:Class .
+
+:Requirement a owl:Class .
+
